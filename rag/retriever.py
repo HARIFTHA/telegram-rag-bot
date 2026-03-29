@@ -11,7 +11,7 @@ def cosine_sim(a, b):
 
     return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
-def retrieve(query, db_path="db/vectors.db", top_k=1):
+def retrieve(query, db_path="db/vectors.db", top_k=3):
     q_emb = model.encode(query).tolist()
     conn = sqlite3.connect(db_path)
     rows = conn.execute("SELECT source, text, embedding FROM chunks").fetchall()
