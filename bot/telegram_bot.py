@@ -13,7 +13,7 @@ async def ask(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     print("Retrieving chunks...")
-    chunks = retrieve(query, top_k=1)
+    chunks = retrieve(query, top_k=3)
 
     print("Generating answer...")
     answer = generate_answer(query, chunks)
