@@ -23,10 +23,10 @@ Answer:
             "prompt": prompt,
             "stream": False
         },timeout=30)
-        print("⬅️ Response received")
+        print("Response received")
 
         return response.json().get("response", "No response").strip()
 
     except Exception as e:
-        print("❌ Ollama error:", e)
+        print("Ollama error:", e)
         return f"Error connecting to Ollama: {e}"
