@@ -95,6 +95,10 @@ Final answer returned to user
 * Runs locally → no API cost
 * Good balance of speed + quality
 
+#### Screenshot :
+<img width="1441" height="877" alt="image" src="https://github.com/user-attachments/assets/b1c15d0a-2219-4831-a7df-49cbbe5d137b" />
+
+
 ### Evaluation Highlights:
 ✔ Clean modular design
 ✔ Efficient retrieval pipeline
