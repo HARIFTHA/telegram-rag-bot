@@ -12,20 +12,20 @@ async def ask(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Usage: /ask <your question>")
         return
 
-    print("🔍 Retrieving chunks...")
+    print("Retrieving chunks...")
     chunks = retrieve(query, top_k=1)
 
-    print("🧠 Generating answer...")
+    print("Generating answer...")
     answer = generate_answer(query, chunks)
 
-    print("✅ Answer generated:", answer)
+    print("Answer generated:", answer)
 
-    reply = f"🤖 Answer:\n{answer}\n\n📄 Sources:\n"
+    reply = f"Answer:\n{answer}\n\n Sources:\n"
 
     for score, src, text in chunks:
         reply += f"- {src}: {text[:100]}...\n"
 
-    print("📤 Sending reply to Telegram...")
+    print("Sending reply to Telegram...")
     await update.message.reply_text(reply)
 
 
